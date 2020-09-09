@@ -1,0 +1,13 @@
+(You might erase this file once the branch is committed, but I thought it helpful to say what changes were made.)
+
+In order to get assimp-examples working on our machines with VS 2019 for 64-bit today, we did these changes:
+
+Project > Properties, for All Configurations / All Platofrms, Configuration Properties > C/C++ > General > Additional Include Directories, added ../common.
+
+Project > Properties, for all Configurations/All Platforms, General > Debugging > Environment, add PATH=..\;%PATH%
+
+Project > Properties, , for All Configurations / x64,  Configuration Properties > Link > General > Additional Link Directories, added ../lib/x64
+
+Quaternion.cc, changed std::copysignf to copysignf.
+
+Globally in code, "./assets" to "../assets"; "./cso" to "../cso"; "../simpleMan2.6.fbx" to "../assets/simpleMan2.6.fbx"

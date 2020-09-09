@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>C:\Users\briggs_w\assimp-examples\AssimpExamples\x64\Debug\03 - Textured Model.exe</ProjectOutputs>
+  <ContentFiles>C:\Users\briggs_w\assimp-examples\AssimpExamples\MaterialOnlyShader.ps.cso;C:\Users\briggs_w\assimp-examples\AssimpExamples\MaterialOnlyShader.vs.cso;C:\Users\briggs_w\assimp-examples\AssimpExamples\cso\TexturedShader.ps.cso;C:\Users\briggs_w\assimp-examples\AssimpExamples\cso\TexturedShader.vs.cso</ContentFiles>
+  <SatelliteDlls></SatelliteDlls>
+  <NonRecipeFileRefs></NonRecipeFileRefs>
+</Project>

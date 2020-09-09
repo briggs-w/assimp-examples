@@ -21,7 +21,7 @@ SetupApp::~SetupApp()
 //
 bool SetupApp::InitializeApp()
 {
-	auto walkingMan = aiImportFile("../simpleMan2.6.fbx", aiProcessPreset_TargetRealtime_MaxQuality);
+	auto walkingMan = aiImportFile("../assets/simpleMan2.6.fbx", aiProcessPreset_TargetRealtime_MaxQuality);
 
 	std::cout << "Number of meshes found in file: " << walkingMan->mNumMeshes << std::endl;
 	std::cout << "Number of vertices in first mesh: " << walkingMan->mMeshes[0]->mNumVertices << std::endl;

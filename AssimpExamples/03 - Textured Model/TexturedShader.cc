@@ -122,8 +122,8 @@ std::future<bool> TexturedShader::Initialize(ComPtr<ID3D11Device> device)
 	//  block until the function provided finishes, and return the result.
 	// Fantastic pattern, totally unnecessary here.
 	return std::async(std::launch::async, [this, device]() -> bool {
-		const char* vsFname = "./cso/TexturedShader.vs.cso";
-		const char* psFname = "./cso/TexturedShader.ps.cso";
+		const char* vsFname = "../cso/TexturedShader.vs.cso";
+		const char* psFname = "../cso/TexturedShader.ps.cso";
 
 		std::uint32_t vsDataLength;
 		std::uint32_t psDataLength;

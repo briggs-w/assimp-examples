@@ -1,5 +1,6 @@
 #include <Quaternion.h>
 #include <algorithm>
+#include <math.h>
 
 namespace sess
 {
@@ -57,9 +58,9 @@ Quaternion Quaternion::FromMatrix(const Matrix & m)
 	float sz = Vec3(m._13, m._23, m._33).Magnitude();
 
 	float w = sqrtf(std::max(0.f, 1.f + m._11 / sx + m._22 / sy + m._33 / sz)) / 2.f;
-	float x = std::copysignf(sqrtf(std::max(0.f, 1.f + m._11 / sx - m._22 / sy - m._33 / sz)) / 2.f, m._32 - m._23);
-	float y = std::copysignf(sqrtf(std::max(0.f, 1.f - m._11 / sx + m._22 / sy - m._33 / sz)) / 2.f, m._13 - m._31);
-	float z = std::copysignf(sqrtf(std::max(0.f, 1.f - m._11 / sx - m._22 / sy + m._33 / sz)) / 2.f, m._21 - m._12);
+	float x = copysignf(sqrtf(std::max(0.f, 1.f + m._11 / sx - m._22 / sy - m._33 / sz)) / 2.f, m._32 - m._23);
+	float y = copysignf(sqrtf(std::max(0.f, 1.f - m._11 / sx + m._22 / sy - m._33 / sz)) / 2.f, m._13 - m._31);
+	float z = copysignf(sqrtf(std::max(0.f, 1.f - m._11 / sx - m._22 / sy + m._33 / sz)) / 2.f, m._21 - m._12);
 
 	return Quaternion(w, x, y, z);
 }

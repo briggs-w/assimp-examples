@@ -39,7 +39,7 @@ bool UVTexturedDemo::InitializeApp()
 			);
 
 	Transform roadTransform(Vec3::Zero, Quaternion(Vec3::UnitY, Radians(-90.f)) * Quaternion(Vec3::UnitX, Radians(-90.f)), Vec3::Ones);
-	roadModel_ = AssimpRoadModel::LoadFromFile("./assets/road.fbx", device_, roadTransform);
+	roadModel_ = AssimpRoadModel::LoadFromFile("../assets/road.fbx", device_, roadTransform);
 	if (!roadModel_)
 	{
 		std::cerr << "Failed to load road model, failing initialization" << std::endl;
@@ -52,7 +52,7 @@ bool UVTexturedDemo::InitializeApp()
 		Quaternion(Vec3::UnitY, Radians(180.f)) * Quaternion(Vec3::UnitX, Radians(-90.f)),
 		Vec3(0.55, 0.55, 0.55)
 	);
-	manModel_ = AssimpManModel::LoadFromFile("./assets/simpleMan2.6.fbx", "./assets/man-skin.png", device_, context_, manTransform);
+	manModel_ = AssimpManModel::LoadFromFile("../assets/simpleMan2.6.fbx", "../assets/man-skin.png", device_, context_, manTransform);
 	if (!manModel_)
 	{
 		std::cerr << "Failed to load man model, failing initialization" << std::endl;

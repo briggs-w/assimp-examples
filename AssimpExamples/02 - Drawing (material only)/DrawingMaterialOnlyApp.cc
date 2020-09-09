@@ -36,7 +36,7 @@ bool DrawingMaterialOnlyApp::InitializeApp()
 	);
 
 	Transform roadTransform(Vec3::Zero, Quaternion(Vec3::UnitY, Radians(-90.f)) * Quaternion(Vec3::UnitX, Radians(-90.f)), Vec3::Ones);
-	roadModel_ = AssimpRoadModel::LoadFromFile("./assets/road.fbx", device_, roadTransform);
+	roadModel_ = AssimpRoadModel::LoadFromFile("../assets/road.fbx", device_, roadTransform);
 	if (!roadModel_)
 	{
 		std::cerr << "Failed to load road model, failing initialization" << std::endl;
